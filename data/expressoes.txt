@@ -1,4 +1,4 @@
-24
+30
 T
 F
 aaa
@@ -23,3 +23,9 @@ zzz
 ( \wedge ( \neg T ) F )
 ( \wedge ( \neg T ) ( \neg T ) )
 ( \vee ( \wedge aaa zzzz ) ( \rightarrow a z ) )
+(\neg a)
+(\vee a b)
+(\wedge c d)
+(\rightarrow e f)
+(\leftrightarrow a b)
+(\leftrightarrow (\leftrightarrow a b) (\neg c))
