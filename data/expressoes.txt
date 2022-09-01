@@ -5,21 +5,21 @@ aaa
 000
 999
 zzz
-( ¬ T )
-( ∨ T F )
-( → T F )
-( ∧ T F )
-( ↔ T F )
-( ¬ ( ¬ aaa ) )
-( ¬ ( ∨ aaa ( ¬ ( ¬ ( ¬ ( ∨ aaa ( ¬ ( ¬ aaa ) ) ) ) ) ) ) )
-¬ T
-) ¬ T (
-( ¬)) T )
-¬ ( ∨ aaa ( ¬ ( ¬ ( ¬ ( ∨ aaa ( ¬ ( ¬ aaa ) ) ( ) ) ) ) ) )
-( → ( ∧ ( ¬ T ) F ) ( → ( ↔ ( ¬ aaa ) zzz ) aa ) )
-( → ( ∧ ( ¬ T ) F ) ( → ( ↔ ( ¬ aaa ) zzz ) bb ) )
-( → T ( ¬ aaa ) )
-( ∧ ( ¬ T ) FFF )
-( ∧ ( ¬ T ) F )
-( ∧ ( ¬ T ) ( ¬ T ) )
-( ∨ ( ∧ aaa zzzz ) ( → a z ) )
+(\neg T)
+( \vee T F )
+(\rightarrow T F)
+(\wedge T F)
+(\leftrightarrow T F)
+(\neg (\neg aaa))
+(\neg (\vee aaa (\neg (\neg (\neg (\vee aaa (\neg (\neg aaa))) )))))
+\neg T
+) \neg T (
+( \neg)) T )
+\neg ( \vee aaa ( \neg ( \neg ( \neg ( \vee aaa ( \neg ( \neg aaa ) ) ( ) ) ) ) ) )
+( \rightarrow ( \wedge ( \neg T ) F ) ( \rightarrow ( \leftrightarrow ( \neg aaa ) zzz ) aa ) )
+( \rightarrow ( \wedge ( \neg T ) F ) ( \rightarrow ( \leftrightarrow ( \neg aaa ) zzz ) bb ) )
+( \rightarrow T ( \neg aaa ) )
+(\wedge (\neg T) TTT)
+( \wedge ( \neg T ) F )
+( \wedge ( \neg T ) ( \neg T ) )
+( \vee ( \wedge aaa zzzz ) ( \rightarrow a z ) )

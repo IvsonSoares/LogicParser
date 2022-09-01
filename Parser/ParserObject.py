@@ -21,8 +21,8 @@ class ParserObject():
     self.constante = ["T","F"]
     self.abreParen = ["("]
     self.fechaParen = [")"]
-    self.operUnario = ["¬"]
-    self.operBinario = ["∨","∧","→","↔"]
+    self.operUnario = ["\\neg"]
+    self.operBinario = ["\\vee","\\wedge","\\rightarrow","\\leftrightarrow"]
 
     # As variaveis abaixo foram criadas com o escopo global para
     # facilitar a manipulacao e evitar uma alta passagem de parametros nas funcoes
@@ -89,7 +89,7 @@ class ParserObject():
     self.index = 0
     self.arrOfValues = []
     self.isValid = False
-    self.arrOfValues = value.split(" ")
+    self.arrOfValues = self.__transformValue(value)
 
     #formulas de Apenas uma constante ou Apenas uma Proposicao
     if (self.__isConstant(self.arrOfValues[self.index]) and len(self.arrOfValues) == 1) or (self.__isPreposition(self.arrOfValues[self.index])
@@ -104,9 +104,16 @@ class ParserObject():
     else:
       print(f"{value} is invalid")
 
-  
+  def __transformValue(self, value):
+    """
+      Essa funcao adiciona espacos em branco apos (
+      ou antes de ) para que seja possivel realizar o .split(" ")
+      e retorna uma lista de elementos eliminanndo os ''
+    """
+    temp = value.replace("(\\", "( \\").replace(")", " )")
+    return [x for x in temp.split(" ") if x != '']
+        
   def __validateFormula(self, value):
-    
     #Formulas que iniciam com "("
     if value in self.abreParen:
       self.parenIsPair += 1

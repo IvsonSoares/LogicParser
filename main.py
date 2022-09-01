@@ -4,7 +4,7 @@ import os
 #Para oBtencao de nota na "Disciplia de Construcao de Interpretadores"
 #PUCPR.
 
-# Repositório GitHub Link: x
+# Repositório GitHub Link: https://github.com/IvsonSoares/LogicParser
 
     ######### IMPORTANTE #########
 ## Para que o programa funcione é preciso
